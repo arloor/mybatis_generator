@@ -2,7 +2,7 @@
 <!DOCTYPE generatorConfiguration PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN" "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd" >
 <generatorConfiguration>
     <classPathEntry
-            location="/Users/ganghuanliu/IdeaProjects/auto_batis/lib/mysql-connector-java-5.1.25-bin.jar" />
+            location="mysql-connector-java-5.1.49.jar" />
     <context id="context1" targetRuntime="MyBatis3">
         <commentGenerator>
             <!-- 是否去除自动生成的注释 true：是 ： false:否 -->
@@ -22,13 +22,12 @@
                              targetProject="src/main/java">
         </javaClientGenerator>
 
+        <!--修改table_name和ClassName-->
         <table tableName="table_name" domainObjectName="ClassName"
                enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false"
                enableSelectByExample="false" selectByExampleQueryId="false" >
-            <!--将数据库的蛇形命名改成驼峰式命名-->
-            <property name="useActualColumnNames" value="false"/>
-<!--            没用，不加这个-->
-<!--            <generatedKey column="id" sqlStatement="MySql" identity="true" />-->
+            <property name="useActualColumnNames" value="false"/><!--将数据库的蛇形命名改成驼峰式命名-->
+            <!--<generatedKey column="id" sqlStatement="MySql" identity="true" />--> <!--没用，不加这个-->
         </table>
     </context>
 </generatorConfiguration>
